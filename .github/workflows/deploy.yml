@@ -1,0 +1,41 @@
+name: Build and Push Docker Images
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Iniciar sesion en Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Construir y publicar imagen Frontend
+        uses: docker/build-push-action@v6
+        with:
+          context: ./front_despacho
+          push: true
+          tags: matyun369/isy1101-frontend:v1
+
+      - name: Construir y publicar imagen Backend Ventas
+        uses: docker/build-push-action@v6
+        with:
+          context: ./back-Ventas_SpringBoot/Springboot-API-REST
+          push: true
+          tags: matyun369/isy1101-backend-ventas:v1
+
+      - name: Construir y publicar imagen Backend Despachos
+        uses: docker/build-push-action@v6
+        with:
+          context: ./back-Despachos_SpringBoot/Springboot-API-REST-DESPACHO
+          push: true
+          tags: matyun369/isy1101-backend-despachos:v1
