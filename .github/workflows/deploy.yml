@@ -24,18 +24,18 @@ jobs:
         with:
           context: ./front_despacho
           push: true
-          tags: matyun369/isy1101-frontend:v1
+          tags: matyuh369/isy1101-frontend:v1
 
       - name: Construir y publicar imagen Backend Ventas
         uses: docker/build-push-action@v6
         with:
           context: ./back-Ventas_SpringBoot/Springboot-API-REST
           push: true
-          tags: matyun369/isy1101-backend-ventas:v1
+          tags: matyuh369/isy1101-backend-ventas:v1
 
       - name: Construir y publicar imagen Backend Despachos
         uses: docker/build-push-action@v6
         with:
           context: ./back-Despachos_SpringBoot/Springboot-API-REST-DESPACHO
           push: true
-          tags: matyun369/isy1101-backend-despachos:v1
+          tags: matyuh369/isy1101-backend-despachos:v1
