@@ -1,8 +1,8 @@
-# Proyecto Semestral ISY1101 - Evaluación Parcial N°2
+# Proyecto Semestral ISY1101 - Examen
 
 ## Descripción del proyecto
 
-Este proyecto corresponde a la Evaluación Parcial N°2 de la asignatura Introducción a Herramientas DevOps. La solución implementa una aplicación de despacho compuesta por un Frontend desarrollado en React/Vite y dos microservicios Backend desarrollados con Spring Boot.
+Este proyecto corresponde al Examen de la asignatura Introducción a Herramientas DevOps. La solución implementa una aplicación de despacho compuesta por un Frontend desarrollado en React/Vite y dos microservicios Backend desarrollados con Spring Boot.
 
 El objetivo principal es aplicar prácticas DevOps mediante contenedorización con Docker, orquestación con Docker Compose, persistencia de datos con volúmenes y preparación para despliegue automatizado en AWS EC2 mediante GitHub Actions.
 
